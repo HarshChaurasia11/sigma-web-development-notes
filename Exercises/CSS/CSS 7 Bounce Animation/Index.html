@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce animation</title>
+    <style>
+        .container {
+            position: relative;
+            background-color: blue;
+            height: 70vh;
+            width: 80vw;
+        }
+
+        .box {
+            position: absolute;
+            background-color: red;
+            height: 70px;
+            width: 80px;
+            border-radius: 80%;
+            bottom: 0;
+            left: 0;
+            animation: bouncingball 5s linear 1s infinite forwards;
+        }
+
+
+        @keyframes bouncingball {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+
+            5% {
+                transform: translateX(2vw) translateY(-4vh);
+            }
+
+            10% {
+                transform: translateX(4vw) translateY(-8vh);
+            }
+
+            15% {
+                transform: translateX(6vw) translateY(-12vh);
+            }
+
+            20% {
+                transform: translateX(8vw) translateY(-16vh);
+            }
+
+            25% {
+                transform: translateX(10vw) translateY(-20vh);
+            }
+
+            30% {
+                transform: translateX(12vw) translateY(-16vh);
+            }
+
+            35% {
+                transform: translateX(14vw) translateY(-12vh);
+            }
+
+            40% {
+                transform: translateX(16vw) translateY(-8vh);
+            }
+
+            45% {
+                transform: translateX(18vw) translateY(-4vh);
+            }
+
+            50% {
+                transform: translateX(20vw) translateY(0);
+            }
+
+            55% {
+                transform: translateX(22vw) translateY(-4vh);
+            }
+
+            60% {
+                transform: translateX(24vw) translateY(-8vh);
+            }
+
+            65% {
+                transform: translateX(26vw) translateY(-12vh);
+            }
+
+            70% {
+                transform: translateX(28vw) translateY(-16vh);
+            }
+
+            75% {
+                transform: translateX(30vw) translateY(-20vh);
+            }
+
+            80% {
+                transform: translateX(32vw) translateY(-16vh);
+            }
+
+            85% {
+                transform: translateX(34vw) translateY(-12vh);
+            }
+
+            90% {
+                transform: translateX(36vw) translateY(-8vh);
+            }
+
+            95% {
+                transform: translateX(38vw) translateY(-4vh);
+            }
+
+            100% {
+                transform: translateX(40vw) translateY(0);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

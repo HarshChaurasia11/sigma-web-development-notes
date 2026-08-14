@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Color Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cinzel:wght@400..900&display=swap');
+
+        body{
+            background-color: rgb(200, 149, 247);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        :root {
+            --background-color: rgb(201, 3, 246);
+            --secolor: rgba(157, 6, 244, 0.867);
+            --anothercolor: rgb(70, 221, 238);
+            --ancolor: rgb(58, 247, 6);
+            --paracolor: rgb(250, 248, 248);
+            --depad: 39px;
+            --fontfam: "Lobster Two", sans-serif;
+            --fonthead: "Cinzel", serif;
+            --fonpara: "Caveat", cursive;
+            --textnav: 35px;
+            --texthead: 33px;
+            --textpara: 22px;
+        }
+
+        ul li {
+            list-style: none;
+            padding-right: var(--depad);
+            font-size: var(--textnav);
+            /* font-family: var(--fontfam); */
+            font-weight: bold;
+            color:aliceblue;
+        }
+
+        ul {
+            background-color: var(--background-color);
+            display: flex;
+        }
+
+        h1 {
+            background-color: var(--secolor);
+            color: var(--ancolor);
+            font-size: var(--texthead);
+            font-family: var(--fonthead);
+        }
+
+        p {
+            /* background-color: var(--anothercolor); */
+            font-size: var(--textpara);
+            font-family: var(--fonpara);
+        }
+        
+        ul li a{
+            color: var(--paracolor);
+            text-decoration: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a multicolor website ehich can change color using CSS Variables -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Service</a></li>
+            <li><a href="/">Contact Us</a></li>
+        </ul>
+    </nav>
+    <h1>Multicolor Website</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem eum, vero repellendus iusto sit laborum
+        voluptate, quis architecto amet libero ipsam? Recusandae eaque ullam at modi animi impedit, sunt maxime debitis
+        alias. Pariatur quam cum, expedita quidem labore iure iusto officia vel officiis est doloremque possimus
+        inventore dolores veritatis ea aliquam vero, consequatur earum.
+        It is a 
+    </p>
+</body>
+
+</html>

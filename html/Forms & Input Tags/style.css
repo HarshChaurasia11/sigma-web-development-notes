@@ -1,0 +1,50 @@
+/* Container */
+div {
+    margin: 15px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Select dropdown */
+select {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px 12px;
+    font-size: 15px;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+select:hover {
+    border-color: #666;
+}
+
+/* Focus effect */
+select:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+/* Disabled option (Select State) */
+select option[disabled] {
+    color: #999;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    select {
+        max-width: 100%;
+    }
+}

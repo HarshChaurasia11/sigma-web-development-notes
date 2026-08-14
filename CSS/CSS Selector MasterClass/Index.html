@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector MasterClass</title>
+    <style>
+        /* Element Selector  */
+        div {
+            background-color: blue;
+        }
+
+        /* class Selector  */
+        .red {
+            background-color: red;
+        }
+
+        /* Id selector */
+        #green {
+            background-color: green;
+        }
+
+        /* child selector  */
+        div > p {
+            color: blueviolet;
+            background-color: aquamarine;
+        }
+
+        /* Descendent Selector  */
+        div p{
+            color: bisque;
+        }
+
+        /* Universal Selector  */
+        *{
+            margin: 0;
+            padding-left: 2px;
+        }
+
+        /* Pseudo Selector */
+        a:visited{
+            color: aquamarine;
+        }
+        
+        a:link{
+            color: blueviolet;
+        }
+
+        a:active{
+            color: black;
+        }
+
+        a:hover{
+            background-color: firebrick;
+        }
+
+        p:first-child{
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <p>I am first</p>
+        <p>I am second</p>
+    </main>
+    <div>
+        I am a div
+    </div>
+    <div class="red">
+        I am another div
+    </div>
+    <div id="green">
+        Hello Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem cumque debitis eos veritatis saepe
+        ducimus.
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet consectetur <p>adipisicing elit. Ad dignissimos illo laboriosam dolor ettemporibus?</p>adipisicing elit. Mollitia, suscipit.
+    </div>
+    <div>Lorem ipsum dolor sit amet consectetur 
+        <article>I am an 
+            <p>
+                I am a paragraph inside an article 
+            </p>article
+        </article>adipisicing elit. Ducimus, ipsam!
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.facebook5.com">Go to Facebook</a>
+</body>
+
+</html>
