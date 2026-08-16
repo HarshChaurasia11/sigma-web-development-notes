@@ -35,5 +35,8 @@ console.log(e[4].matches("#skyblue"))
 // this method find closest ancestor
 console.log(e[4].closest("#skyblue"))
 
-
+// that true return because e[2] is inside in .container class 
 console.log(document.querySelector(".container").contains(e[2]))
+
+// they return false value because they .container class not contains body
+console.log(document.querySelector(".container").contains(document.querySelector("body")))
