@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .container {
+            background-color: rgb(188, 144, 238);
+            padding: 10px;
+            margin: 60px;
+            border: 2px dashed black;
+            border-radius: 10px;
+
+
+        }
+
+        .childContainer {
+            display: flex;
+            justify-content: center;
+            background-color: lightgreen;
+            padding: 30px;
+            margin: 60px;
+            border: 2px solid black;
+            border-radius: 10px;
+
+        }
+
+        .child {
+            border: 2px dashed black;
+            border-radius: 10px;
+            background-color: skyblue;
+            box-shadow: 5px 2px 10px blueviolet;
+            padding: 5px 20px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .child:active {
+            background-color: cyan;
+        }
+    </style>
+</head>
+
+<body style="background-color: blanchedalmond;">
+    <!--
+        EVENT BUBBLING:
+
+        When we click the child button, the click event
+        first runs on the child element.
+
+        Then the event bubbles up to its parent element
+        (childContainer), and then to its parent
+        (container).
+
+        Flow:
+        
+        Child → Child Container → Container
+    -->
+    <div class="container">
+        <section class="childContainer">
+            <button class="child">
+                I am a child
+            </button>
+        </section>
+    </div>
+    <script>
+        // Event handler for the Child (Button)
+        // This runs first when the button is clicked.
+        document.querySelector(".child").addEventListener("click", () => {
+            // .stopPropagation is used to stop this bubble to go to the parent.
+            // event.stopPropagation();
+            alert("Child was Clicked")
+        })
+
+        // Event handler for the Child Container
+        // The event bubbles from the button to its parent.
+        document.querySelector(".childContainer").addEventListener("click", () => {
+            alert("Child Container was Clicked")
+        })
+
+        // Event handler for the Main Container
+        // The event continues bubbling up to the parent of childContainer.
+        document.querySelector(".container").addEventListener("click", () => {
+            alert("Container was Clicked")
+        })
+
+        function getRandomColor() {
+            let val_1 = Math.ceil(0 + Math.random() * 255);
+            let val_2 = Math.ceil(0 + Math.random() * 255);
+            let val_3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val_1}, ${val_2}, ${val_3})`
+        }
+
+
+        // Set interval used repeat again and again perticular code after given time
+        let a = setInterval(() => {
+            document.querySelector(".childContainer").style.backgroundColor = getRandomColor();
+        }, 1000);
+
+        // clear Interval function is used to stop imeediatelly setInterval
+        // clearInterval(a);
+        
+        let b = setTimeout(() => {
+            document.querySelector(".container").style.backgroundColor = getRandomColor();
+        }, 3000);
+        // clear Interval function is used to stop imeediatelly setTimeout
+        // clearTimeout(b);
+
+
+    </script>
+</body>
+
+</html>
