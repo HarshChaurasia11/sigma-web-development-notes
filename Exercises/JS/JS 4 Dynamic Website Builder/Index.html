@@ -4,10 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Website Builder</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+        .card{
+            display: flex;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 75vw;
+            box-sizing: border-box;
+            margin: 20px auto;
+            gap: 10px;
+            align-items: center;
+            box-shadow: 0px 0px 20px 10px black;
+        }
+
+        .card img{
+            width: 200px;
+            border-radius: 10px;
+        }
+
+        .image{
+            position: relative;
+        }
+
+        .text h2{
+            font-size: 22px;
+        }
+
+        .duration{
+            background-color: rgb(61, 59, 59);
+            opacity: 0.9;
+            padding: 2px;
+            border-radius: 8px;
+            color: white;
+            position: absolute;
+            bottom: -5px;
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://i.ytimg.com/vi/BGeDBfCIqas/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAQ9PuM1Zn58x2U9MLhbV7nPC70NQ" alt="thumbnail">
+                <p class="duration">31:50</p>
+            </div>
+            <div class="text">
+                <h2>Basic Structure of an HTML Website | Sigma Web Development Course - Tutorial #3</h2>
+                <p>CodeWithHarry • 2500000 views • 3 months old</p>
 
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
