@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker's Terminal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .hackerCode {
+            color: green;
+            font-size: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Create a hacking simulator which has green background and it shows these messages with random delay of 1 to 5 seconds
+
+    "Initializing Hacking",
+    "Reading your files",
+    "Password files Detected",
+    "Sending all password and personal files to server",
+    "Cleaning up",
+    "Connecting to server",
+    "Accessing database",
+    "Downloading files",
+    "Encrypting data",
+    "Deleting logs"
+
+    The three dots must blink so that it look like a real Terminal -->
+
+    <div class="container">
+        <div class="hackerCode">
+
+        </div>
+    </div>
+    <script>
+
+        function animateDots(element) {
+            let count = 0;
+
+            setInterval(() => {
+                count++;
+
+                if (count > 3) {
+                    count = 1;
+                }
+
+                element.textContent = ".".repeat(count);
+
+            }, 500);
+        }
+
+        function time(getData) {
+            return new Promise((resolve) => {
+                const randomNumber = Math.floor(Math.random() * (7000 - 1500 + 1)) + 1500;
+                setTimeout(() => {
+                    document.querySelector(".hackerCode").innerHTML +=
+                        `<div class="hackingLine">${getData}<span class="dots">.</span></div>`
+                    let dots = document.querySelector(".hackingLine:last-child .dots");
+
+                    animateDots(dots);
+                    resolve()
+                }, randomNumber)
+
+            })
+        }
+
+        async function hacker() {
+            const messages = [
+                "Initializing Hacking",
+                "Reading your files",
+                "Password files Detected",
+                "Sending all password and personal files to server",
+                "Cleaning up",
+                "Connecting to server",
+                "Accessing database",
+                "Downloading files",
+                "Encrypting data",
+                "Deleting logs"
+
+            ];
+            for (let message of messages) {
+                await time(message);
+            }
+
+        }
+
+
+        hacker()
+    </script>
+</body>
+
+</html>
